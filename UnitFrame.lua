@@ -111,10 +111,10 @@ local colour = function(bar, unit)
 	end
 end
 
-hooksecurefunc("UnitFrameHealthBar_Update", colour)
-hooksecurefunc("HealthBar_OnValueChanged", function(self)
-   colour(self, self.unit)
-end)
+--hooksecurefunc("UnitFrameHealthBar_Update", colour)
+--hooksecurefunc("HealthBar_OnValueChanged", function(self)
+--   colour(self, self.unit)
+--end)
 ---------------------------------------------------
 -- value and percent
 ---------------------------------------------------
@@ -122,8 +122,8 @@ local oldtextlist = {
 		PlayerFrameHealthBarText,
 		PlayerFrameManaBarText,
 		
-		--TargetFrameTextureFrameHealthBarText,
-		--TargetFrameTextureFrameManaBarText,
+		TargetFrameTextureFrameHealthBarText,
+		TargetFrameTextureFrameManaBarText,
 		
 		FocusFrameTextureFrameHealthBarText,
 		FocusFrameTextureFrameManaBarText,
@@ -137,7 +137,7 @@ end
 local function fixvalue(val)
 	if(val >= 1e6) then
 		return ('%.2fm'):format(val / 1e6):gsub('%.?0+([km])$', '%1')
-	elseif(val >= 1e4) then
+	elseif(val >= 1e3) then
 		return ('%.1fk'):format(val / 1e3):gsub('%.?0+([km])$', '%1')
 	else
 		return val
