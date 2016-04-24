@@ -29,7 +29,7 @@ local function UpdatePlayerFrame()
         PlayerFrameManaBar:SetHeight(12)
 	end
 	
-	PlayerFrameTexture:SetTexture(path.."UI-TargetingFrame")
+	PlayerFrameTexture:SetTexture(path.."UI-TargetingFrame-Elite")
 end
 
 hooksecurefunc("PlayerFrame_UpdateArt", UpdatePlayerFrame)
@@ -122,8 +122,8 @@ local oldtextlist = {
 		PlayerFrameHealthBarText,
 		PlayerFrameManaBarText,
 		
-		TargetFrameTextureFrameHealthBarText,
-		TargetFrameTextureFrameManaBarText,
+		--TargetFrameTextureFrameHealthBarText,
+		--TargetFrameTextureFrameManaBarText,
 		
 		FocusFrameTextureFrameHealthBarText,
 		FocusFrameTextureFrameManaBarText,
