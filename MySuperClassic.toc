@@ -1,0 +1,28 @@
+## Interface: 50001
+## Author: Fernir,Oriole
+## Title: |cff777777My|rSuperClassic
+## Notes: Little UI sctpits
+## Version: 5.05
+
+
+UnitFrame.lua
+
+Minimap.lua
+
+Buffs.lua
+Castby.lua
+
+ActionBars.lua
+
+HoverTips.lua
+
+StatsText.lua
+
+Align.lua
+InspectFix.lua
+Mail.lua
+petbattle.lua
+scripts.lua
+tekability.lua
+tekKompare.lua
+yMount.lua
