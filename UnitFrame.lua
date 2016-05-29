@@ -167,7 +167,7 @@ for unit,elements in pairs(newtextlist) do
 		local fontsize = hpfont
 		local textname = unit..k
 		local offsetX = 5
-		local offsetY = 0
+		local offsetY = -1
 		if k == 'manavalue' then fontsize = ppfont offsetY = -4 end
 		if opts.anchor == "RIGHT" then offsetX = -5  end
 		
