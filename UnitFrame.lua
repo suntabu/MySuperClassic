@@ -136,9 +136,9 @@ end
 
 local function fixvalue(val)
 	if(val >= 1e6) then
-		return ('%.2fm'):format(val / 1e6):gsub('%.?0+([km])$', '%1')
+		return ('%.2fM'):format(val / 1e6):gsub('%.?0+([km])$', '%1')
 	elseif(val >= 1e3) then
-		return ('%.1fk'):format(val / 1e3):gsub('%.?0+([km])$', '%1')
+		return ('%.1fK'):format(val / 1e3):gsub('%.?0+([km])$', '%1')
 	else
 		return val
 	end
@@ -208,7 +208,7 @@ local UpDateText = function()
 				elseif UnitIsTapped(unit) and not UnitIsTappedByPlayer(unit) then
 					opts.text:SetText('被攻击')
 				else
-					opts.text:SetText(fixvalue(value))
+					opts.text:SetText(fixvalue(value).." / "..fixvalue(Maxvalue))
 				end
 			elseif k == 'manavalue' then
 				if unit== 'tagert' and not UnitIsConnected(unit) or Maxvalue == 0 or value == 0  then
